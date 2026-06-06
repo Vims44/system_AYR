@@ -27,4 +27,8 @@ git add .    (Добавление изменений)
 git commit -m "в кавычках пишите что добавили/убрали/и тп"      (Создание коммита)
 git push origin main      (Отправка на GitHub)
 
-popa
+Для докера:
+git clone https://github.com/Vims44/system_AYR
+cd system_AYR
+docker-compose up -d
+В браузере: http://localhost:8000
