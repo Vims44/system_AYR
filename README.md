@@ -16,15 +16,9 @@ cp .env.example .env
 ```
 Открыть `.env` и заполнить пароли 
 ```
-### 3. Запустить бэкенд и базу данных
+### 3. Запустить бэкенд, фронтенд и базу данных
 ```bash
-docker-compose up -d --build db php
-```
-### 4. Запустить фронтенд
-```bash
-cd frontend
-npm install
-npm run dev
+docker-compose up -d --build
 ```
 
 ### Адреса в браузере
