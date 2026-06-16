@@ -1,34 +1,43 @@
-# system_AYR
-Система аналитики успеваемости и рисков
+# Система выявления академических рисков (СВАР)
 
-Клонирование репозитория:
-git clone https://github.com/Vims44/system_AYR
-(Установка зависимостей бекенд)
-cd backend
-npm install
-(Установка зависимостей фронтенд)
-cd frontend
-npm install
+Веб-система для вычисления и мониторинга академических рисков студентов.
 
-ЗАПУСК ПРОЕКТА
-Открыть powershell, всегда переходить в папочку с проектом
-терминал 1:
-cd backend
-npm run dev
-терминал 2:
-cd frontend
-npm run dev
+**Стек:** Vue.js · PHP 8.2 · MySQL 8.0 · Docker
 
-
-Коммиты (отправка на гитхаб):
-cd C:\Users\ВАШ ПУТЬ\Desktop\АУР\system_AYR
-git status   (Проверка состояния)
-git add .    (Добавление изменений)
-git commit -m "в кавычках пишите что добавили/убрали/и тп"      (Создание коммита)
-git push origin main      (Отправка на GitHub)
-
-Для докера:
-git clone https://github.com/Vims44/system_AYR
+## Первый запуск 
+### 1. Клонировать репозиторий
+```bash
+git clone https://github.com/Vims44/system_AYR.git
 cd system_AYR
-docker-compose up -d
-В браузере: http://localhost:8000
+```
+### 2. Создать файл с паролями
+```bash
+cp .env.example .env
+```
+Открыть `.env` и заполнить пароли 
+```
+### 3. Запустить бэкенд и базу данных
+```bash
+docker-compose up -d --build db php
+```
+### 4. Запустить фронтенд
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+### Адреса в браузере
+| Фронтенд | http://localhost:5173 |
+| Бэкенд (PHP) | http://localhost:8000 |
+| БД (MySQL) | localhost:3306 |
+
+### Остановить проект
+```bash
+docker-compose down
+```
+
+## Получить изменения от команды
+```bash
+git pull origin main
+```
